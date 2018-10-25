@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  
+        
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1"
+        android:text="Select Start Date" />
+    <DatePicker
+        android:layout_width="384.0dp"
+        android:layout_height="223.0dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/datePicker1"
+        android:datePickerMode="spinner"
+        android:startYear="2018"
+        android:endYear="2018"
+        android:calendarViewShown="false" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:text="Select End  Date" />
+    <DatePicker
+        android:layout_width="385.0dp"
+        android:layout_height="191.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/datePicker2"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:startYear="2018"
+        android:endYear="2018" />
+        
+  
+   
+</LinearLayout>
