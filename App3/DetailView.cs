@@ -74,6 +74,18 @@ namespace App3
             {
                 case Android.Resource.Id.Home:
                     Database db = new Database();
+                    if(String.IsNullOrEmpty(title.Text)){
+                        title.Error = "Title should not be Empty";
+                    }
+                    if (String.IsNullOrEmpty(subtitle.Text))
+                    {
+                        subtitle.Error = "SubTitle should not be Empty";
+                    }
+                    if (String.IsNullOrEmpty(distance.Text))
+                    {
+                        distance.Error = "Distance should not be Empty";
+                    }
+
                     item1 = new ListItem();
                     item1.Title = title.Text;
                     item1.Subtitle = subtitle.Text;

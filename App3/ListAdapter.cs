@@ -54,23 +54,6 @@ namespace App3
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView;
-            if (convertView == null)
-            {
-
-                view = context.LayoutInflater.Inflate(Resource.Layout.list_item, null, false);
-
-            }
-            ListItem item = this[position];
-            view.FindViewById<TextView>(Resource.Id.textView3).Text = item.Title;
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Subtitle;
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = item.Date.ToString();
-
-            ImageView myimage = view.FindViewById<ImageView>(Resource.Id.imageView1);
-            Glide.With(context).Load(item.Image).Into(myimage);
-
-            return view;
-
             //var view = convertView;
             //if (convertView == null)
             //{
@@ -81,12 +64,29 @@ namespace App3
             //ListItem item = this[position];
             //view.FindViewById<TextView>(Resource.Id.textView3).Text = item.Title;
             //view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Subtitle;
-            //view.FindViewById<TextView>(Resource.Id.textView1).Text = item.Distance.ToString();
+            //view.FindViewById<TextView>(Resource.Id.textView1).Text = item.Date.ToString();
 
             //ImageView myimage = view.FindViewById<ImageView>(Resource.Id.imageView1);
             //Glide.With(context).Load(item.Image).Into(myimage);
 
             //return view;
+
+            var view = convertView;
+            if (convertView == null)
+            {
+
+                view = context.LayoutInflater.Inflate(Resource.Layout.list_item, null, false);
+
+            }
+            ListItem item = this[position];
+            view.FindViewById<TextView>(Resource.Id.textView3).Text = item.Title;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Subtitle;
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = item.Distance.ToString();
+
+            ImageView myimage = view.FindViewById<ImageView>(Resource.Id.imageView1);
+            Glide.With(context).Load(item.Image).Into(myimage);
+
+            return view;
 
             // ans-2 a.
 
